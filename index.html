@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="Expires" content="-1" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>IN THE BASEMENT / EREN X RINER X EREN 호러 합작</title>
+    <link rel="canonical" href="https://inthebasement.github.io/">
+    <meta name="description" content="진격의 거인 에렌 x 라이너 x 에렌 조합의 할로윈 기념 호러 합작입니다.">
+    <meta property="og:locale" content="ko_KR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="IN THE BASEMENT / EREN X RINER X EREN 호러 합작">
+    <meta property="og:description" content="IT 서비스를 제대로 이용하는 다양한 방법">
+    <meta property="og:url" content="https://inthebasement.github.io/">
+    <meta property="og:site_name" content="IN THE BASEMENT / EREN X RINER X EREN 호러 합작">
+
+    <link href="intro.css" rel="stylesheet" type="text/css" />
+    <link href="reset.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    
+  </head>
+  <body>
+
+    <div class="skip">
+      <a class="btn_skip" href="main.html" target="_self">SKIP</a>
+    </div>
+
+    <div class="video-background">
+      <div id="player"></div>
+    </div>
+
+    <script>
+    var tag = document.createElement('script');
+    tag.src = "http://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        // create youtube player
+        var player;
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('player', {
+               height: 'auto',
+               width: '100%',
+               videoId: '0Bmhjf0rKe8',
+               playerVars:{
+                 'autoplay':1,
+                 'rel':0,
+                 'showinfo':0,
+                 'controls':0,
+                 'autohide':1,
+                 'mute': 1,},
+               events: {
+                'onStateChange': onPlayerStateChange
+              }
+            });
+        }
+
+        // // 유튜브 플레이어가 다 만들어지면 호출됨
+        // function onPlayerReady(event) {
+        // event.target.playVideo();
+        // }
+
+        // when video ends
+        function onPlayerStateChange(event) {
+          //alert (event.data);
+          if (event.data == 0)
+                  GoHome();
+        }
+        function GoHome(){
+            window.location = 'main.html';
+        }
+
+    </script>
+
+  </body>
+
+
+
+</html>

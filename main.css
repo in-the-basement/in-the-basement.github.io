@@ -1,0 +1,396 @@
+/*main*/
+
+body {
+    transition: opacity .65s .15s
+}
+
+a {
+    cursor: pointer;
+    color: white;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav {
+    position: relative;
+    height: 100%;
+    padding: 2rem;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Rye', cursive;
+    color: white;
+    z-index: 1;
+  }
+
+.title {
+    float: left;
+    position: fixed;
+    font-size: 54px;
+    width: 800px;
+}
+
+.mx-auto {
+    margin: auto;
+}
+
+.title:before {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: 1px 0 #4e73df;
+    top: 0;
+    color: #5a5c69;
+    background: #f8f9fc;
+    overflow: hidden;
+    clip: rect(0,900px,0,0);
+    animation: noise-anim-2 3s infinite linear alternate-reverse;
+}
+.title:after {
+    content: attr(data-text);
+    position: absolute;
+    left: 4px;
+    text-shadow: -1px 0 #e74a3b;
+    top: 0;
+    color: #fff;
+    background: #000;
+    overflow: hidden;
+    clip: rect(0,900px,0,0);
+    animation: noise-anim 2s infinite linear alternate-reverse;
+}
+.text-gray-800 {
+    color: #fff!important;
+}
+.mb-5, .my-5 {
+    margin-bottom: 3rem!important;
+}
+.lead {
+    font-size: 1.25rem;
+    font-weight: 300;
+}
+@-webkit-keyframes noise-anim{
+  0%{clip:rect(89px,9999px,100px,0)}
+  5%{clip:rect(4px,9999px,62px,0)}
+  10%{clip:rect(43px,9999px,16px,0)}
+  15%{clip:rect(2px,9999px,58px,0)}
+  20%{clip:rect(12px,9999px,6px,0)}
+  25%{clip:rect(89px,9999px,25px,0)}
+  30%{clip:rect(15px,9999px,38px,0)}
+  35%{clip:rect(57px,9999px,77px,0)}
+  40%{clip:rect(24px,9999px,72px,0)}
+  45%{clip:rect(81px,9999px,3px,0)}
+  50%{clip:rect(93px,9999px,26px,0)}
+  55%{clip:rect(68px,9999px,85px,0)}
+  60%{clip:rect(43px,9999px,28px,0)}
+  65%{clip:rect(44px,9999px,11px,0)}
+  70%{clip:rect(17px,9999px,33px,0)}
+  75%{clip:rect(74px,9999px,66px,0)}
+  80%{clip:rect(74px,9999px,4px,0)}
+  85%{clip:rect(82px,9999px,31px,0)}
+  90%{clip:rect(83px,9999px,78px,0)}
+  95%{clip:rect(23px,9999px,57px,0)}
+  100%{clip:rect(72px,9999px,8px,0)}
+}
+
+@keyframes noise-anim{
+  0%{clip:rect(89px,9999px,100px,0)}
+  5%{clip:rect(4px,9999px,62px,0)}
+  10%{clip:rect(43px,9999px,16px,0)}
+  15%{clip:rect(2px,9999px,68px,0)}
+  20%{clip:rect(12px,9999px,6px,0)}
+  25%{clip:rect(89px,9999px,25px,0)}
+  30%{clip:rect(15px,9999px,38px,0)}
+  35%{clip:rect(57px,9999px,77px,0)}
+  40%{clip:rect(24px,9999px,72px,0)}
+  45%{clip:rect(81px,9999px,3px,0)}
+  50%{clip:rect(93px,9999px,26px,0)}
+  55%{clip:rect(68px,9999px,85px,0)}
+  60%{clip:rect(43px,9999px,28px,0)}
+  65%{clip:rect(44px,9999px,11px,0)}
+  70%{clip:rect(17px,9999px,33px,0)}
+  75%{clip:rect(74px,9999px,66px,0)}
+  80%{clip:rect(80px,9999px,4px,0)}
+  85%{clip:rect(62px,9999px,31px,0)}
+  90%{clip:rect(73px,9999px,78px,0)}
+  95%{clip:rect(23px,9999px,57px,0)}
+  100%{clip:rect(82px,9999px,8px,0)}
+}
+
+.replay {
+    right: 0;
+    margin-right: 2rem;
+    position: fixed;
+}
+
+.replay:hover{
+    border-bottom: #fff solid 2px;
+    transition-duration: 0.5s;
+}
+
+
+.left_text {
+    position: fixed;
+    width: 100vh;
+    text-align: center;
+    margin-left: 2rem;
+    color: white;
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 14px;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+    padding-left: 2rem;
+}
+
+.right_text {
+    position: fixed;
+    width: 100vh;
+    text-align: center;
+    margin-right: 2rem;
+    color: white;
+    font-family: 'Rye', cursive !important;
+    font-size: 24px;
+    transform: rotate(270deg);
+    transform-origin: right bottom;
+    right: 0;
+}
+
+.description {
+    position: relative;
+    padding: 4rem 2rem;
+    max-width: 500px;
+}
+
+.description p{
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: white;
+    opacity: 70%; 
+    word-break: keep-all;
+    margin-bottom: 16px;
+}
+
+
+.list {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 2rem;
+}
+
+.thum_wrap {
+    width: 20%;
+    min-width: 280px;
+    margin: 0 8px;
+    position: relative;
+    display: inline-block;
+}
+
+.thum {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 32px;
+    height: 360px;
+}
+
+.thum>img {
+    width: 100%;
+}
+
+.thum_wrap .thum_hover {
+    color: white;
+    height: 360px;
+    background-color: rgb(0, 0, 0, 0.7);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+}
+
+.thum_hover .txt {
+    overflow: hidden;
+    position: relative;
+    top: 43%;
+}
+
+h1 {
+    font-family: 'Rye', cursive !important;
+    font-size: 32px !important;
+    color: white;
+    margin-bottom: 12px !important;
+}
+
+h2 {
+    font-family: 'Rye', cursive !important;
+    font-size: 24px !important;
+    color: white;
+}
+
+hr {
+    width: 30px;
+    border: 1px solid white;
+    margin: 16px auto;
+    opacity: 30%;
+}
+
+.type {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 16px;
+    color: white;
+    margin: 8px;
+}
+
+.thum > img:hover {
+    opacity: 0;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
+
+.thum_hover:hover {
+    opacity: 100%;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s;
+}
+
+
+/*illust, text*/
+
+.contents {
+    padding: 2rem;
+    margin: 0 auto;
+    background-image: url(./img/doom-5172428_1280.jpg);
+    background-color: #000;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    top:0;
+    text-align: center;
+    overflow: auto;
+}
+
+.info {
+    text-align: center;
+    color: white;
+    margin-bottom: 32px;
+}
+
+.illust>img{
+    max-width: 900px;
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 2rem;
+}
+
+.back {
+    margin-left: 2rem;
+    font-family: 'Rye', cursive;
+    position: fixed;
+    font-size: 16px;
+    display: inline-block;
+    left: 0;
+}
+
+.back:hover{
+    border-bottom: #fff solid 2px;
+    transition-duration: 0.5s;
+}
+
+.text {
+    max-width: 1000px;
+    margin: 0 auto;
+    background: rgb(0, 0, 0, 0.9);
+    padding: 2rem;
+    position: relative;
+}
+
+.text>p {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 18px;
+    line-height: 36px;
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    margin: 32px 0;
+    word-break: keep-all;
+}
+
+
+
+@media only screen and (max-width: 1260px){
+
+    .list {
+        text-align: center;
+    }
+
+    .contents {
+        height: 100vh;
+    }
+
+}
+
+@media only screen and (max-width: 1024px){
+
+    .title {
+        float: none;
+        position: fixed;
+        font-size: 42px;
+        width: 800px;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+
+    .title {
+        float: none;
+        position: relative;
+        font-size: 42px;
+        width: 100%;
+        display: block;
+    }
+
+    .replay {
+        float: none;
+        position: relative;
+        margin-top: 24px;
+        display: inline-block;
+    }
+
+    .description {
+        padding: 0rem 2rem;
+    }
+
+
+    .left_text,
+    .right_text {
+        visibility: hidden;
+    }
+
+    .info {
+        text-align: left;
+        color: white;
+        margin-bottom: 32px;
+        margin-top: 42px;
+    }
+    
+    .illust>img{
+        width: 100%;
+    }
+
+    .text {
+        padding: 1rem;
+    }
+
+    .text>p {
+        font-size: 16px;
+    }
+
+}
