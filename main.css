@@ -278,7 +278,7 @@ hr {
 }
 
 .modal-content {
-    padding:2rem;
+    padding:2rem 2rem 4rem 2rem;
 }
 
 .info {
@@ -291,7 +291,6 @@ hr {
     max-width: 900px;
     display: inline-block;
     width: 80%;
-    margin-bottom: 2rem;
 }
 
 .close {
