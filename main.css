@@ -184,7 +184,7 @@ video {
     padding: 2rem;
 }
 
-.thum_wrap {
+.btn {
     width: 20%;
     min-width: 280px;
     margin: 0 8px;
@@ -203,7 +203,7 @@ video {
     width: 100%;
 }
 
-.thum_wrap .thum_hover {
+.btn .thum_hover {
     color: white;
     height: 360px;
     background-color: rgb(0, 0, 0, 0.7);
@@ -221,14 +221,16 @@ video {
 }
 
 h1 {
-    font-family: 'Rye', cursive !important;
+    font-family: 'Nanum Myeongjo', serif !important;
+    font-weight: 800 !important;
     font-size: 32px !important;
     color: white;
     margin-bottom: 12px !important;
 }
 
 h2 {
-    font-family: 'Rye', cursive !important;
+    font-family: 'Nanum Myeongjo', serif !important;
+    font-weight: 800 !important;
     font-size: 24px !important;
     color: white;
 }
@@ -262,18 +264,21 @@ hr {
 
 /*illust, text*/
 
-.contents {
-    padding: 2rem;
-    margin: 0 auto;
-    background-image: url(./img/doom-5172428_1280.jpg);
-    background-color: #000;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    top:0;
-    text-align: center;
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
     overflow: auto;
+    text-align: center;
+}
+
+.modal-content {
+    padding:2rem;
 }
 
 .info {
@@ -289,16 +294,17 @@ hr {
     margin-bottom: 2rem;
 }
 
-.back {
+.close {
     margin-left: 2rem;
     font-family: 'Rye', cursive;
     position: fixed;
     font-size: 16px;
     display: inline-block;
     left: 0;
+    color: white;
 }
 
-.back:hover{
+.close:hover{
     border-bottom: #fff solid 2px;
     transition-duration: 0.5s;
 }
@@ -330,7 +336,7 @@ hr {
         text-align: center;
     }
 
-    .contents {
+    .modal {
         height: 100vh;
     }
 
@@ -384,17 +390,18 @@ hr {
         margin-bottom: 32px;
         margin-top: 42px;
     }
-    
-    .illust>img{
-        width: 100%;
-    }
+
 
     .text {
-        padding: 1rem;
+        padding: 0;
     }
 
     .text>p {
         font-size: 16px;
+    }
+
+    .illust>img {
+        width: 100%;
     }
 
 }

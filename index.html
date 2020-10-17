@@ -26,11 +26,16 @@
   </head>
   <body>
 
+    <iframe src="./bgm.sci-Fi.mp3" allow="autoplay" id="audio" style="display:none"></iframe>
+    <audio id="audio" autoplay>
+      <source src="./bgm/sci-Fi.mp3">
+    </audio>
+
     <div class="skip">
       <a class="btn_skip" href="main.html" target="_self">SKIP</a>
     </div>
 
-    <div class="video-background">
+    <div class="video-closeground">
       <div id="player"></div>
     </div>
 
@@ -46,14 +51,15 @@
             player = new YT.Player('player', {
                height: 'auto',
                width: '100%',
-               videoId: '0Bmhjf0rKe8',
+               videoId: 'F9Gd_Rcy9LA',
                playerVars:{
                  'autoplay':1,
                  'rel':0,
                  'showinfo':0,
                  'controls':0,
                  'autohide':1,
-                 'mute': 1,},
+                 'mute': 1,
+                 'vq': 1080},
                events: {
                 'onStateChange': onPlayerStateChange
               }
