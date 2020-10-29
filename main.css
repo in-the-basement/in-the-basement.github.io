@@ -142,15 +142,14 @@ audio {
 
 .left_text {
     position: fixed;
-    width: 100vh;
-    text-align: center;
+    display: inline-block;
     margin-left: 2rem;
+    bottom: 16rem;
     color: white;
     font-family: 'Nanum Myeongjo', serif;
-    font-size: 14px;
+    font-size: 12px;
     transform: rotate(90deg);
     transform-origin: bottom left;
-    padding-left: 2rem;
 }
 
 .right_text {
@@ -231,7 +230,7 @@ h1 {
     font-weight: 800 !important;
     font-size: 32px !important;
     color: white;
-    margin-bottom: 12px !important;
+    margin-bottom: 16px !important;
 }
 
 h2 {
@@ -293,10 +292,14 @@ hr {
     margin-bottom: 32px;
 }
 
-.illust>img{
+.illust img{
     max-width: 900px;
     display: inline-block;
     width: 80%;
+}
+
+.wide {
+    max-width: 1400px !important;
 }
 
 .close {
@@ -312,6 +315,11 @@ hr {
 .close:hover{
     border-bottom: #fff solid 2px;
     transition-duration: 0.5s;
+}
+
+.modal-content hr {
+    width: 100%;
+    margin-bottom: 4rem;
 }
 
 .modal-content .text {
